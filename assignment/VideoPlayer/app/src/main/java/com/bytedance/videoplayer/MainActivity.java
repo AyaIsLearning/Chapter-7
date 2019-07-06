@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void chooseVideo() {
         // TODO-C2 (5) Start Activity to select a video
-        System.out.println("caonima");
+        System.out.println("111");
         //Intent intent = new Intent();
 
         //intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //intent.setDataAndType(mSelectedVideo, getMIMEType(file));
-        startActivityForResult(Intent.createChooser(intent,"caonima"),2);
+        startActivityForResult(Intent.createChooser(intent,"222"),2);
     }
 
     @Override
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             try {
                 mSelectedVideo=FileProvider.getUriForFile(this,"com.bytedance.videoplayer.fileProvider",new File(new URI(String.valueOf(data.getData()))));
                 player.setDataSource(this,mSelectedVideo);
-                System.out.println("NMSL");
+                System.out.println("?!");
             }catch (Exception e){
                 e.printStackTrace();
             }
